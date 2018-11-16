@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Entities/Enemy_Bipedal.cs" type="Script" id=1]
+[ext_resource path="res://Objects/Collision_Small.tres" type="Shape2D" id=2]
+[ext_resource path="res://Graphics/Entity/Crab/Enemy_Crab.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://Objects/Helper/DebugDrawer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://AI/AIController.cs" type="Script" id=5]
+[ext_resource path="res://Objects/AI/ChaseAI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Helper/DataBinder.tscn" type="PackedScene" id=7]
+
+[node name="Enemy_Crab" type="KinematicBody2D" index="0" groups=[
+"enemy",
+]]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+shape = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+frames = ExtResource( 3 )
+animation = "idle"
+
+[node name="DebugDrawer" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="AIController" type="Node" parent="." index="3"]
+
+script = ExtResource( 5 )
+
+[node name="ChaseAI" parent="AIController" index="0" instance=ExtResource( 6 )]
+
+[node name="DataBinder" parent="." index="4" instance=ExtResource( 7 )]
+
+editor/display_folded = true
+
+[node name="Enemy_Crab" type="Node" parent="DataBinder" index="0"]
+
+

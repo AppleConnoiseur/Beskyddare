@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Music/Odyssey.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Enemies/Enemy_Crab.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/TestCollisionObject.tscn" type="PackedScene" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( -0.888702, 3.11226, 1021.82, 4.34, 630, 80, 430, 80, 1024.27, 598.565, 780.939, 291.281, 745.1, 237.523, 629.34, 144.238, 429.62, 143.654, 597.792, 337.924, 460.235, 338.978, 342.969, 186.4, 616.766, 403.014, 0.339035, 598.565, 413.592, 402.487, 413.328, 382.459, 291.582, 224.611 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 1, 4, 5, 6 ), PoolIntArray( 2, 1, 6, 7 ), PoolIntArray( 8, 7, 6, 9, 10, 11 ), PoolIntArray( 12, 5, 4 ), PoolIntArray( 12, 4, 13, 14 ), PoolIntArray( 15, 14, 13, 0, 16 ), PoolIntArray( 16, 0, 3, 11 ), PoolIntArray( 11, 3, 8 ) ]
+outlines = [ PoolVector2Array( -0.888702, 3.11226, 1021.82, 4.34, 1024.27, 598.565, 0.339035, 598.565 ), PoolVector2Array( 430, 80, 429.62, 143.654, 629.34, 144.238, 630, 80 ), PoolVector2Array( 342.969, 186.4, 460.235, 338.978, 597.792, 337.924, 745.1, 237.523, 780.939, 291.281, 616.766, 403.014, 413.592, 402.487, 413.328, 382.459, 291.582, 224.611 ) ]
+
+[node name="Play" type="Node" index="0"]
+
+[node name="Navigation2D" type="Navigation2D" parent="." index="0"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D" index="0"]
+
+visible = false
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 1 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Player" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 874.905, 285.089 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Enemy_Crab" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 597.909, 255.37 )
+
+[node name="StaticBody2D" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 513.194, 370.777 )
+
+[node name="StaticBody2D4" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 529.155, 111.724 )
+
+[node name="StaticBody2D3" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 680.167, 320.44 )
+rotation = -0.601171
+scale = Vector2( 1, 1 )
+
+[node name="StaticBody2D2" parent="." index="7" instance=ExtResource( 4 )]
+
+position = Vector2( 378.143, 284.835 )
+rotation = 0.918343
+
+

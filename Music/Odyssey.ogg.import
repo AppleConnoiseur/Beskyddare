@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Odyssey.ogg-397639d986ea4b8956cc81f3d3bb32b9.oggstr"
+
+[deps]
+
+source_file="res://Music/Odyssey.ogg"
+dest_files=[ "res://.import/Odyssey.ogg-397639d986ea4b8956cc81f3d3bb32b9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

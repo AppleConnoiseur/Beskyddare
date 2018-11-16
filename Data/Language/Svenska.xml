@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language>
+	<Name>Svenska</Name>
+	<Default>True</Default>
+	<Keyed>
+		<!-- Title texts -->
+		<Game.Title>Beskyddare</Game.Title>
+		<Game.Settings>Inställningar</Game.Settings>
+		<!-- Generic -->
+		<Menu.Back>Tillbaka</Menu.Back>
+		<Menu.Quit>Avsluta</Menu.Quit>
+		<!-- Main menu -->
+		<Game.Title.Start>Starta spel</Game.Title.Start>
+		<Game.Title.LoadGame>Ladda spel</Game.Title.LoadGame>
+		<Game.Title.Settings>Inställningar</Game.Title.Settings>
+		<!-- Settings -->
+		<Game.Settings.Language>Språk</Game.Settings.Language>
+		<Game.Settings.Controls>Kontroll inställningar</Game.Settings.Controls>
+		<!-- Input mapping -->
+		<Game.Settings.RebindAction.Title>Ändra kontroll bindning</Game.Settings.RebindAction.Title>
+		<Controls.RebindThis>&lt;Ny bindning&gt;</Controls.RebindThis>
+		<!-- Mouse -->
+		<Controls.Mouse.1>Vänster musknapp</Controls.Mouse.1>
+		<Controls.Mouse.2>Höger musknapp</Controls.Mouse.2>
+		<Controls.Mouse.3>Mitten musknapp</Controls.Mouse.3>
+		<Controls.Mouse.4>Mushjul upp</Controls.Mouse.4>
+		<Controls.Mouse.5>Mushjul ner</Controls.Mouse.5>
+		<Controls.Mouse.7>Mushjul vänster knapp</Controls.Mouse.7>
+		<Controls.Mouse.8>Mushjul höger knapp</Controls.Mouse.8>
+		<!-- Hero controls -->
+		<Controls.hero_move_up>Gå up</Controls.hero_move_up>
+		<Controls.hero_move_down>Gå ner</Controls.hero_move_down>
+		<Controls.hero_move_left>Gå vänster</Controls.hero_move_left>
+		<Controls.hero_move_right>Gå höger</Controls.hero_move_right>
+		<Controls.hero_action_weapon_main>Primär attack</Controls.hero_action_weapon_main>
+		<Controls.hero_action_weapon_secondary>Sekundär attack</Controls.hero_action_weapon_secondary>
+	</Keyed>
+</Language>

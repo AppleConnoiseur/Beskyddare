@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DataBindings>
+	<Binding>
+		<Parent>Enemy_Crab</Parent>
+		<TargetNode>AIController</TargetNode>
+		<Values>
+			<searchRadius Type="Float">200</searchRadius>
+			<movementSpeed Type="Float">50</movementSpeed>
+			<allowRandomWander Type="Boolean">True</allowRandomWander>
+			<wanderDistance Type="Float">100</wanderDistance>
+			<idleTime Type="Float">50</idleTime>
+			<chaseTime Type="Float">200</chaseTime>
+		</Values>
+	</Binding>
+</DataBindings>

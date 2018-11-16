@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language>
+	<Name>English</Name>
+	<Keyed>
+		<!-- Title texts -->
+		<Game.Title>Protector</Game.Title>
+		<Game.Settings>Settings</Game.Settings>
+		<!-- Generic -->
+		<Menu.Back>Go Back</Menu.Back>
+		<Menu.Quit>Quit</Menu.Quit>
+		<!-- Main menu -->
+		<Game.Title.Start>Start game</Game.Title.Start>
+		<Game.Title.LoadGame>Load game</Game.Title.LoadGame>
+		<Game.Title.Settings>Settings</Game.Title.Settings>
+		<!-- Settings -->
+		<Game.Settings.Language>Language</Game.Settings.Language>
+		<Game.Settings.Controls>Controller settings</Game.Settings.Controls>
+		<!-- Input mapping -->
+		<Game.Settings.RebindAction.Title>Rebind control</Game.Settings.RebindAction.Title>
+		<Controls.RebindThis>&lt;New bind&gt;</Controls.RebindThis>
+		<!-- Mouse -->
+		<Controls.Mouse.1>Left mousebutton</Controls.Mouse.1>
+		<Controls.Mouse.2>Right mousebutton</Controls.Mouse.2>
+		<Controls.Mouse.3>Middle mousebutton</Controls.Mouse.3>
+		<Controls.Mouse.4>Mousewheel up</Controls.Mouse.4>
+		<Controls.Mouse.5>Mousewheel down</Controls.Mouse.5>
+		<Controls.Mouse.7>Mousewheel left button</Controls.Mouse.7>
+		<Controls.Mouse.8>Mousewheel right button</Controls.Mouse.8>
+		<!-- Hero controls -->
+		<Controls.hero_move_up>Move up</Controls.hero_move_up>
+		<Controls.hero_move_down>Move down</Controls.hero_move_down>
+		<Controls.hero_move_left>Move left</Controls.hero_move_left>
+		<Controls.hero_move_right>Move right</Controls.hero_move_right>
+		<Controls.hero_action_weapon_main>Primary attack</Controls.hero_action_weapon_main>
+		<Controls.hero_action_weapon_secondary>Secondary attack</Controls.hero_action_weapon_secondary>
+	</Keyed>
+</Language>

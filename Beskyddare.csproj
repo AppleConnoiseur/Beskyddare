@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DCE7C68C-6A18-4E95-995B-BBF2C43ECA04}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
+    <RootNamespace>Beskyddare</RootNamespace>
+    <AssemblyName>Beskyddare</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tools|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TOOLS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <HintPath>$(ProjectDir)\.mono\assemblies\GodotSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\AIController.cs" />
+    <Compile Include="AI\BaseAI.cs" />
+    <Compile Include="AI\ChaseAI.cs" />
+    <Compile Include="DataBinding\NodeDataBinding.cs" />
+    <Compile Include="DataBinding\DataBinder.cs" />
+    <Compile Include="DataBinding\DataBindingDatabase.cs" />
+    <Compile Include="Debug\DebugPainter.cs" />
+    <Compile Include="Debug\DebugDrawer.cs" />
+    <Compile Include="Entities\Bipedal.cs" />
+    <Compile Include="Entities\Enemy_Bipedal.cs" />
+    <Compile Include="Entities\IMapInteractible.cs" />
+    <Compile Include="Entities\Movable.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Localization\Language.cs" />
+    <Compile Include="Localization\LanguageDatabase.cs" />
+    <Compile Include="Logic\Faction.cs" />
+    <Compile Include="Logic\Game.cs" />
+    <Compile Include="Logic\GameLoop.cs" />
+    <Compile Include="Logic\Map.cs" />
+    <Compile Include="Logic\RayCastHitInfo.cs" />
+    <Compile Include="Logic\Settings.cs" />
+    <Compile Include="Logic\SettingsData.cs" />
+    <Compile Include="Logic\TargetInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ControlMapImporter.cs" />
+    <Compile Include="UI\MainMenu.cs" />
+    <Compile Include="UI\RebindActionHelper.cs" />
+    <Compile Include="UI\SettingsMenu.cs" />
+    <Compile Include="UI\Translator.cs" />
+    <Compile Include="Utility\ControlUtility.cs" />
+    <Compile Include="Utility\FileSystem.cs" />
+    <Compile Include="Utility\GenDirection.cs" />
+    <Compile Include="Utility\GenMath.cs" />
+    <Compile Include="Utility\GenPhysics.cs" />
+    <Compile Include="Utility\GenRandom.cs" />
+    <Compile Include="Utility\GenVisibility.cs" />
+    <Compile Include="Utility\GodotUtility.cs" />
+    <Compile Include="Utility\Log.cs" />
+    <Compile Include="Utility\ReflectionUtility.cs" />
+    <Compile Include="XML\IExposeData.cs" />
+    <Compile Include="XML\XMLScribe.cs" />
+    <Compile Include="XML\XMLTools.cs" />
+    <Compile Include="XML\Converters\XMLTypeConverter.cs" />
+    <Compile Include="XML\Converters\XMLTypeConverter_Collections.cs" />
+    <Compile Include="XML\Converters\XMLTypeConverter_Object.cs" />
+    <Compile Include="XML\Converters\XMLTypeConverter_Primitives.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

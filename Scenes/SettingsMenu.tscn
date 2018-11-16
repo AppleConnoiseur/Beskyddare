@@ -1,0 +1,375 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/SettingsMenu.cs" type="Script" id=1]
+[ext_resource path="res://Objects/Helper/Translator.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Helper/ControlMapImporter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Helper/RebindActionHelper.tscn" type="PackedScene" id=4]
+
+[node name="SettingsMenu" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+use_top_left = false
+_sections_unfolded = [ "Anchor", "Margin" ]
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 368.0
+margin_top = 246.0
+margin_right = 656.0
+margin_bottom = 354.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 1
+
+[node name="Label" type="Label" parent="CenterContainer/GridContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 288.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Game.Settings"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Translator" parent="CenterContainer/GridContainer/Label" index="0" instance=ExtResource( 2 )]
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 18.0
+margin_right = 288.0
+margin_bottom = 22.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/GridContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 26.0
+margin_right = 288.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+columns = 2
+
+[node name="Label" type="Label" parent="CenterContainer/GridContainer/GridContainer" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 156.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Game.Settings.Language"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Translator" parent="CenterContainer/GridContainer/GridContainer/Label" index="0" instance=ExtResource( 2 )]
+
+[node name="LanguageOption" type="OptionButton" parent="CenterContainer/GridContainer/GridContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 160.0
+margin_right = 288.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 128, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+clip_text = true
+align = 0
+items = [  ]
+selected = -1
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/GridContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 50.0
+margin_right = 288.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/GridContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 58.0
+margin_right = 288.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Game.Settings.Controls"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Translator" parent="CenterContainer/GridContainer/Label2" index="0" instance=ExtResource( 2 )]
+
+[node name="ControlMappingContainer" type="VBoxContainer" parent="CenterContainer/GridContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 288.0
+margin_bottom = 76.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="ControlMapImporter" parent="CenterContainer/GridContainer/ControlMappingContainer" index="0" instance=ExtResource( 3 )]
+
+[node name="HSeparator3" type="HSeparator" parent="CenterContainer/GridContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 80.0
+margin_right = 288.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Button" type="Button" parent="CenterContainer/GridContainer" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 88.0
+margin_right = 288.0
+margin_bottom = 108.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Menu.Back"
+flat = false
+align = 1
+
+[node name="Translator2" parent="CenterContainer/GridContainer/Button" index="0" instance=ExtResource( 2 )]
+
+[node name="Popup_RebindAction" type="PopupDialog" parent="." index="1"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -100.0
+margin_right = 150.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+_sections_unfolded = [ "Anchor", "Margin", "Rect" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup_RebindAction" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="VerticalBlock" type="Control" parent="Popup_RebindAction/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 300.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 8 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Size Flags" ]
+
+[node name="Label" type="Label" parent="Popup_RebindAction/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 12.0
+margin_right = 300.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 5
+size_flags_stretch_ratio = 2.0
+text = "Game.Settings.RebindAction.Title"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags" ]
+
+[node name="Translator" parent="Popup_RebindAction/VBoxContainer/Label" index="0" instance=ExtResource( 2 )]
+
+[node name="HSeparator" type="HSeparator" parent="Popup_RebindAction/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 30.0
+margin_right = 300.0
+margin_bottom = 34.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="RebindActionText" type="Label" parent="Popup_RebindAction/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 300.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="RebindActionHelper" parent="Popup_RebindAction/VBoxContainer/RebindActionText" index="0" instance=ExtResource( 4 )]
+
+[connection signal="item_selected" from="CenterContainer/GridContainer/GridContainer/LanguageOption" to="." method="LanguageSelected"]
+
+[connection signal="pressed" from="CenterContainer/GridContainer/Button" to="." method="GoBackToMainMenu"]
+
+
